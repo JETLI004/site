@@ -91,3 +91,160 @@
         background: #f7f7f7;
     }
 }
+
+.mbr-hero {
+  color: #fff;
+  position: relative;
+}
+.mbr-hero__text {
+  font-size: 25px;
+  font-weight: bold;
+  left: -2px;
+  letter-spacing: 2px;
+  line-height: 27px;
+  margin: -18px 0 1px 0;
+  padding-bottom: 20px;
+  position: relative;
+  top: 8px;
+
+}
+.mbr-hero__subtext {
+  font-size: 15px;
+  line-height: 18px;
+  margin: -32px 0 3px 0;
+  padding: 0 0 20px 0;
+  position: relative;
+  top: 6px;
+}
+
+.mbr-buttons {
+  margin: -26px 0 13px 0;
+  position: relative;
+  text-align: left;
+  top: 26px;
+}
+.mbr-buttons__btn,
+.mbr-buttons__link {
+  margin: 0 10px 13px 0;
+}
+.mbr-buttons__btn,
+.mbr-buttons__link,
+.mbr-buttons__btn:hover,
+.mbr-buttons__link:hover {
+  text-decoration: none;
+}
+.mbr-buttons--no-offset {
+  margin-top: 0;
+  top: 0;
+}
+.mbr-buttons--only-links {
+  left: -20px;
+}
+.mbr-buttons--center {
+  left: 5px;
+  text-align: center;
+}
+.mbr-buttons--center.mbr-buttons--only-links {
+  left: 0;
+}
+.mbr-buttons--right {
+  text-align: right;
+}
+.mbr-buttons--right .mbr-buttons__btn,
+.mbr-buttons--right .mbr-buttons__link {
+  margin: 0 0 13px 10px;
+}
+.mbr-buttons--right.mbr-buttons--only-links {
+  left: 20px;
+}
+.mbr-buttons--activated {
+  left: 5px;
+  text-align: center;
+}
+.mbr-buttons--activated .mbr-buttons__btn,
+.mbr-buttons--activated .mbr-buttons__link {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mbr-buttons--activated .mbr-buttons__link {
+  font-size: 25px;
+  padding: 10px 30px 2px;
+}
+.mbr-buttons--activated .mbr-buttons__btn {
+  font-size: 15px;
+  margin-top: 9px;
+  padding: 15px 30px;
+}
+.mbr-buttons--freeze.mbr-buttons--activated .mbr-buttons__link {
+  font-size: 25px !important;
+}
+.mbr-buttons--freeze.mbr-buttons--activated .mbr-buttons__link,
+.mbr-buttons--freeze.mbr-buttons--activated .mbr-buttons__link:hover {
+  color: #fff !important;
+}
+.mbr-buttons--freeze.mbr-buttons--activated .mbr-buttons__btn {
+  font-size: 15px !important;
+}
+@media (max-width: 991px) {
+  .mbr-buttons--active {
+    left: 5px;
+    text-align: center;
+  }
+  .mbr-buttons--active .mbr-buttons__btn,
+  .mbr-buttons--active .mbr-buttons__link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mbr-buttons--active .mbr-buttons__link {
+    font-size: 25px;
+    padding: 10px 30px 2px;
+  }
+  .mbr-buttons--active .mbr-buttons__btn {
+    font-size: 15px;
+    margin-top: 9px;
+    padding: 15px 30px;
+  }
+  .mbr-buttons--freeze.mbr-buttons--active .mbr-buttons__link {
+    font-size: 25px !important;
+  }
+  .mbr-buttons--freeze.mbr-buttons--active .mbr-buttons__link,
+  .mbr-buttons--freeze.mbr-buttons--active .mbr-buttons__link:hover {
+    color: #fff !important;
+  }
+  .mbr-buttons--freeze.mbr-buttons--active .mbr-buttons__btn {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 767px) {
+  .mbr-buttons--auto-align {
+    left: 5px;
+    text-align: center;
+  }
+  .mbr-buttons--auto-align.mbr-buttons--only-links {
+    left: 0;
+  }
+}
+@media (max-width: 530px) {
+  .mbr-buttons {
+    left: 0;
+  }
+  .mbr-buttons__btn,
+  .mbr-buttons__link,
+  .mbr-buttons--right .mbr-buttons__btn,
+  .mbr-buttons--right .mbr-buttons__link {
+    display: inline-block;
+    margin: 0 0 13px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .mbr-buttons--activated .mbr-buttons__btn,
+  .mbr-buttons--activated .mbr-buttons__link,
+  .mbr-buttons--active .mbr-buttons__btn,
+  .mbr-buttons--active .mbr-buttons__link {
+    width: auto;
+  }
+  .mbr-buttons--activated .mbr-buttons__btn,
+  .mbr-buttons--active .mbr-buttons__btn {
+    margin-top: 9px;
+  }
+}
