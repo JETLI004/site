@@ -215,34 +215,53 @@
               register a domain name for you. Then N7,000 annually.</h6>
             <h4 style="box-sizing: border-box; font-weight: normal; line-height: 40.32px; font-size: 2em; margin: 10px 0px; font-family: Arimo, arial, verdana, sans-serif;">1.
               Pay online now&nbsp;</h4>
-            <form action="http://voguepay.com/pay/" id="payform" method="POST" class="AVAST_PAM_nonloginform"
+            
+              <script src="//voguepay.com/js/voguepay.js"></script>
+              <form action="//voguepay.com/pay/" id="payform" method="POST" onsubmit="return false;">
+                <input name="v_merchant_id" value="1373-0025380" type="hidden">
+                <input name="merchant_ref" value="234-567-890" type="hidden">
+                <input name="memo" value="Online Payment Setup Package" type="hidden">
+                <input name="success_url" value="https://www.wisonline.com.ng/business-email-configuration" type="hidden">
+               <input name="fail_url" value="" type="hidden">
+              <input name="store_id" value="25" type="hidden">&nbsp;
+                <label style="padding:5px">How Much you Want to Pay</label>
+                <input name="total" type="text"><br>
+                <b>IMPORTANT:
+                  You must only pay N15,000.00 or N12,500. We will not be
+                  responsible for delays caused by making any wrong payment.</b> <br>
+                <input name="closed" value="closedFunction" type="hidden"> <input
 
-              style="box-sizing: border-box; padding: 0px; margin: 0px;">&nbsp;<span>&nbsp;</span><label
+                  name="success" value="successFunction" type="hidden"> <input
 
-                style="box-sizing: border-box; display: inline-block; vertical-align: middle; margin: 0px; padding: 5px; position: relative; top: 0px; left: 0px; zoom: 1;">How
-                Much you Want to Pay</label><span>&nbsp;</span><input name="total"
+                  name="failed" value="failedFunction" type="hidden"> <input
 
-                style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: auto; zoom: 1; margin: 0px; border: 1px solid rgb(204, 204, 204); font-size: 1em; padding: 5px 0px; text-indent: 5px; border-radius: 5px; background: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 1px 6px inset; transition: box-shadow 0.5s ease 0s, border 0.5s ease 0s, background 0.5s ease 0s;"
+                  alt="Submit" src="https://voguepay.com/images/buttons/buynow_blue.png"
 
-                type="text"><br style="box-sizing: border-box;">
-              <b style="box-sizing: border-box; color: rgb(0, 0, 0); font-weight: bold;">IMPORTANT:
-                You must only pay N15,000.00 or N12,500. We will not be
-                responsible for delays caused by making any wrong payment.</b><span>&nbsp;</span><br
+                  type="image">&nbsp;</form>
+              <script>
 
-                style="box-sizing: border-box;">
-              <input alt="Submit" src="img/paywithvoguepay.png"
+            closedFunction=function() {
+            alert('window closed');
+            }
+            successFunction=function(transaction_id) {
+            alert('Transaction was successful, Ref: '+transaction_id)
+            }
+            failedFunction=function(transaction_id) {
+            alert('Transaction was not successful, Ref: '+transaction_id)
+            }
+            </script>
+              <script>
 
-                style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: auto; zoom: 1; margin: 0px; border: 1px solid rgb(204, 204, 204); font-size: 1em; padding: 5px 0px; text-indent: 5px; border-radius: 5px; background: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 1px 6px inset;"
-
-                type="image">&nbsp;</form>
+            Voguepay.init({form:'payform'});
+            </script>
+            
+            
+           
             &nbsp;
-            <figure style="box-sizing: border-box; display: block;"><img alt="img/payimages.jpg"
+            <figure style="box-sizing: border-box; display: block;"><img alt="img/payimages.jpg" class="media" src="img/payimages.jpg"
 
-                class="media" src="img/payimages.jpg"
-
-                style="box-sizing: border-box; margin: 0px; padding: 0px; display: inline-block; position: relative; zoom: 1; vertical-align: bottom;"
-
-                width="60%"><figcaption style="box-sizing: border-box; display: block;"><b
+                style="box-sizing: border-box; margin: 0px; padding: 0px; display: inline-block; position: relative; zoom: 1; 
+              vertical-align: bottom;" width="60%"><figcaption style="box-sizing: border-box; display: block;"><b
 
                   style="box-sizing: border-box; color: rgb(0, 0, 0); font-weight: bold;">We
                   accept All Debit / Credit Cards</b><b style="box-sizing: border-box; color: rgb(0, 0, 0); font-weight: bold;"><br
