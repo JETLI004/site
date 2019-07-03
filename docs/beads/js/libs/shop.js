@@ -504,7 +504,7 @@ $("#topay").text("Submitting...");
 if(getCart) {
 $.ajax({
 type: "POST",crossDomain: true,
-url: "https://incontinent-swap.000webhostapp.com/orders/save2.php",
+url: "https://hairspice.com.ng/beads/save2.php",
 //  url: "https://mail.zoho.com/api/accounts/686546688/messages",
 //url: "http://localhost/gw/save2.php",
 data: { data1, orders, getCart },
