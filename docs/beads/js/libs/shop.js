@@ -500,7 +500,7 @@ var amount = parseFloat(qty * price);
 
 //    console.log(json_email);
 // AJAX code to submit form.
-$("#topay").text("Submitting...");
+$("#status").html("loading...<progress class='progress is-danger is-30%'></progress>");
 if(getCart) {
 $.ajax({
 type: "POST",crossDomain: true,
