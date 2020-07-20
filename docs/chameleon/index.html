@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+    <title><!-- Insert your title here --></title>
+      <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <!--  <script src="js/browser.min.js"></script>-->
+  
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  
+     
+</head>
+<body>
+   <form method="post" onsubmit="return false">
+    
+         <input type="text" id="cid"><br>
+             <input type="text" id="ic"><br>
+                 <input type="text" id="im"><br>
+                     <input type="text" id="ra"><br>
+                         Title<input type="text" id="ti"><br>
+                             <input type="text" id="tm"><br>
+                                 <input type="text" id="us"><br>
+                                    
+                                 <button id="up">Save</button>   
+   </form>
+   
+   <script>
+    document.getElementById("up").addEventListener("click", function(){ 
+    //var id = document.getElementById("id").value;
+    var cid = document.getElementById("cid").value;
+    var ic = document.getElementById("ic").value;
+    var im = document.getElementById("im").value;
+    var ra = document.getElementById("ra").value;
+    var ti = document.getElementById("ti").value;
+    var tm = document.getElementById("tm").value;
+    var us = document.getElementById("us").value;
+    
+    function makeid(length){
+        var result = ' ';
+        var characters = '0123456789';
+        var charactersLength= characters.length;
+        for( var i=0; i< length; i++){
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+        }
+    
+    var id = makeid(10);
+    console.log(id);
+    var data = {
+        id: id,
+        cid: cid,
+        ic: ic,
+        im: im,
+        ra: ra,
+        ti: ti,
+        tm: firebase.firestore.FieldValue.serverTimestamp(),
+        us: us
+    };
+    
+      const db = firebase.firestore()
+      db.collection("posts").doc(id).set(data).then(function(){
+           console.log("done");
+      }).catch(function(error){
+                        alert(error);
+                        console.error(error);
+                    });
+      
+                    
+             
+    });
+   </script>
+   
+   Data Shows here
+   <div id="disp" >
+    
+
+
+    
+   </div>
+   
+   
+
+   <script src="js/firebaselogin.js"></script>
+  
+  
+  
+  
+    <script src="js/infinitescroll8.js"></script>
+     
+     
+</body>
+</html>
