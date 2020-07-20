@@ -2,7 +2,7 @@ $(document).ready(function(){
 //upload files for nannies
     console.log("Yed Na");
     
-    console.log(${{secret.SECRET_KEY}});
+    alert('${{secret.SECRET_KEY}}');
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
