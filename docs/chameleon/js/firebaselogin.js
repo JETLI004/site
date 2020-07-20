@@ -1,12 +1,13 @@
 $(document).ready(function(){
 //upload files for nannies
     console.log("Yed Na");
+    var api =  ${{secret.FIREBASE_APIKEY}};
     
   //  alert('${{secret.FIREBASE_APIKEY}}');
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "'${{secret.FIREBASE_APIKEY}}'", 
+    apiKey: api,
     authDomain: "chameleon-c7b5b.firebaseapp.com", 
     databaseURL: "https://chameleon-c7b5b.firebaseio.com", 
     projectId: "chameleon-c7b5b",
