@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "${{secret.SECRET_KEY}}", 
+    apiKey: "'${{secret.SECRET_KEY}}'", 
     authDomain: "chameleon-c7b5b.firebaseapp.com", 
     databaseURL: "https://chameleon-c7b5b.firebaseio.com", 
     projectId: "chameleon-c7b5b",
